@@ -2667,3 +2667,8 @@ input, select, textarea {
   .skill {
     color: white;
   }
+
+  .subtitle {
+	  font-size: 75%;
+	  color: rgba(0, 0, 0, 0.35)
+  }
