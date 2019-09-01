@@ -1,2 +1,0 @@
-# peterdjlee.com
-Personal website
