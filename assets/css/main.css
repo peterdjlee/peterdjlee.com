@@ -196,6 +196,7 @@
 		}
 
 		a:hover {
+			transform: translateY(-1px);
 			color: #ff7496;
 		}
 
@@ -779,6 +780,7 @@
 				}
 
 				ul.icons li a:hover:before {
+					transform: translateY(-1px);
 					color: rgba(0, 0, 0, 0.75);
 				}
 
@@ -795,6 +797,7 @@
 				}
 
 				ul.icons li a:hover {
+					transform: translateY(-1px);
 					border-color: rgba(0, 0, 0, 0.75);
 				}
 
@@ -840,6 +843,7 @@
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
+			transform: translateY(-1px);
 			border-color: rgba(0, 0, 0, 0.75);
 			color: rgba(0, 0, 0, 0.75) !important;
 		}
