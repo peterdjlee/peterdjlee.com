@@ -18,7 +18,7 @@ window.onload = function () {
         var response = JSON.parse(response);
         var date = new Date(response[0]['created_at']);
         var url;
-        if (response[0]["type"] == "PushEvent") {
+        if (response[0]["type"] == "PushEvent" && response[0]["public"] == true) {
             url = "https://www.github.com/";
             url += response[0]["repo"]["name"];
             url += "/commit/"
