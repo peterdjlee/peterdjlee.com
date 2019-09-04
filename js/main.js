@@ -17,6 +17,15 @@ window.onload = function () {
     client.get(url, function (response) {
         var response = JSON.parse(response);
         var date = new Date(response[0]['created_at']);
-        document.getElementById('github-activity').innerHTML = 'Last Github Activity: ' + timeago.format(date);
+        var url;
+        if (response[0]["type"] == "PushEvent") {
+            url = "https://www.github.com/";
+            url += response[0]["repo"]["name"];
+            url += "/commit/"
+            url += response[0]["payload"]["commits"][0]["sha"];
+            document.getElementById('github-activity').innerHTML = 'Last Github Activity: <a href="'+url+'">' + timeago.format(date) + '</a>';
+        } else {
+            document.getElementById('github-activity').innerHTML = 'Last Github Activity: ' + timeago.format(date);
+        }
     });
 }
